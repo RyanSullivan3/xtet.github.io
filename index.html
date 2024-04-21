@@ -26,5 +26,49 @@ ul {
   </head>
   <body>
     <h1>The xtet is the greatest band in the world.</h1>
+    <div style="float:left">
+      <p>hello hello</p>
+      <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'About')">About</button>
+  <button class="tablinks" onclick="openCity(event, 'Publications')">Publications</button>
+  <button class="tablinks" onclick="openCity(event, 'Experience')">Experience</button>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>about the band</p>
+</div>
+
+<div id="Publications" class="tabcontent">
+  <h3>Events</h3>
+  <p><ol>
+      <li>gig 1</li>
+      <li>gig 2</li>
+      <li>gig 3</li>
+    </ol></p> 
+</div>
+
+<div id="Experience" class="tabcontent">
+  <h3>Members</h3>
+  <p><ul>
+    <li> Ryan</li>
+    <li>Riley</li>
+  </ul></p>
+</div>
+  <script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
   </body>
 </html>
